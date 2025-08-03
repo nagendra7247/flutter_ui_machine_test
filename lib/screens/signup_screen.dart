@@ -57,10 +57,11 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(height: 16),
 
                 // Confirm Password
+                // helooojdanqwanfqanqajfnkdcjqdan
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    labelText: 'Confirm Password',
+                    labelText: 'Confirm Password ',
                     prefixIcon: const Icon(Icons.lock_outline),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
