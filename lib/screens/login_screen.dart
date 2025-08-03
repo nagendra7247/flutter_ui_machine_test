@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_machine_test/screens/signup_screen.dart';
+
+import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -52,18 +55,18 @@ class LoginScreen extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Navigator.pushReplacement() can be used here if needed
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text("Login Clicked")),
-                    );
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const HomeScreen()),);
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    backgroundColor: Colors.indigo,
+                    backgroundColor: Colors.blue,
                   ),
-                  child: const Text("Login", style: TextStyle(fontSize: 16)),
+                  child: const Text("Login", style: TextStyle(fontSize: 16, color: Colors.white)),
                 ),
               ),
 
@@ -83,7 +86,12 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   const Text("Don't have an account?"),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const SignUpScreen()),
+                      );
+                    },
                     child: const Text("Sign Up"),
                   ),
                 ],
